@@ -1,9 +1,16 @@
+// Calling of IDS
 const startButton = document.getElementById("start-btn")
+const nextButton = document.getElementById("next-btn")
 const infoPage = document.getElementById("quiz-title")
 const introInfo = document.getElementById("intro-page")
 const questionContainerElement = document.getElementById("question-container")
+const questionElement = document.getElementById("question")
+const answerButtonsElement = document.getElementById("answer-buttons")
 
+// Variable setting
+let shufffledQuestions, currentQuestionIndex
 
+// event listeners
 startButton.addEventListener("click", startQuiz)
 
 
@@ -12,13 +19,37 @@ function startQuiz(){
     infoPage.classList.add("hide")
     introInfo.classList.add("hide")
     startButton.classList.add("hide")
+    shufffledQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
     questionContainerElement.classList.remove("hide")
     setNextQuestion()
 }
 
+// Resetting page after each question
+function resetQuestion() {
+    while (answerButtonsElement.firstChild) {
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+    }
+}
+
 // Setting next question.
 function setNextQuestion(){
+    resetQuestion()
+    showQuestion(shufffledQuestions[currentQuestionIndex])
+}
 
+function showQuestion(question) {
+    questionElement.innerText = question.question
+    question.answers.forEach(answer => {
+        const button = document.createElement("button")
+        button.innerText = answer.text
+        button.classList.add("btn")
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener("click", selectAnswer)
+        answerButtonsElement.appendChild(button)
+    });
 }
 
 // What happens when we select an answer.
