@@ -1,0 +1,1 @@
+// Start Quiz when start button is clicked
