@@ -78,11 +78,11 @@ body.wrong {
     display: none;
 }
 
-.intro-page {
+#intro-page {
     font-weight: bold;
 }
 
-.quiz-title, .intro-page {
+#quiz-title, #intro-page {
     text-align: center;
     justify-content: center;
     align-items: center;
