@@ -88,3 +88,9 @@ body.wrong {
     align-items: center;
     padding-bottom:  100px;
 }
+
+#high-score-link {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
