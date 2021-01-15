@@ -18,8 +18,28 @@ Thes steps I plan to follow are:
 * end page showing results of the quiz.
 
 ## What are some challenges that were encountered during this task?
-I had issues implementing the timer due to the time deduction process.
+* I had issues implementing the timer due to the time deduction process.
 
-## WHat were some skills that were improved by performing this task?
-* improved my understanding of objects and functions.
-* functions and 
+## What were some skills that were improved by performing this task?
+* improved my understanding of objects, properties and functions.
+* extended my knowledge of vanilla JS.
+
+
+## Finished Code
+
+![html page](mdfiles/htmlfile.png)
+![JS file](mdfiles/jsfile1.png)
+![JS file](mdfiles/jsfile2.png)
+![JS file](mdfiles/jsarrayquestions.png)
+
+## Finished quiz
+
+![quiz page](mdfiles/quizstartpage.png)
+![quiz question page](mdfiles/quizquestionpage.png)
+
+[GitHub:] https://github.com/Milan1422/HW4-CodeQuiz
+[GitHubPages:] https://milan1422.github.io/HW4-CodeQuiz/
+
+
+
+
